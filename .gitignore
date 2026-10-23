@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+
+# Data — tracked by DVC (week 3), not git
+data/raw/*
+data/interim/*
+data/processed/*
+!data/**/.gitkeep
+
+# ML outputs
+mlruns/
+mlartifacts/
+models/
+*.onnx
+*.pt
+*.pkl
+
+# Infra state
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Geospatial outputs (large; DVC or MinIO, not git)
+*.tif
+*.tiff
+*.zarr/
+*.nc
+*.SAFE/
+*.aux.xml
